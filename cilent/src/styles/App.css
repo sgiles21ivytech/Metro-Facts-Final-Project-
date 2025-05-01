@@ -1,0 +1,70 @@
+/* ===================== GLOBAL / ACCESSIBILITY STYLING ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-green: #008c4a;
+  --gold-accent: #f5c146;
+  --deep-green: #004d2b;
+  --python-yellow: #ffd43b;
+  --python-green: #306998;
+  --dark-bg: #1e1e1e;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Verdana, sans-serif;
+  background-color: var(--dark-bg);
+  color: white;
+  line-height: 1.6;
+}
+
+/* ===================== GLOBAL ANIMATIONS ===================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===================== RESPONSIVE BREAKPOINTS ===================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===================== UTILITIES ===================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-in-out;
+}
